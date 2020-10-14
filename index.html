@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Assignment 1</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,800"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="loader1"><img src="Blocks-1s-200px.gif" /></div>
+
+    <main class="container">
+      <div class="box header">
+        <header>
+          <h1>COMP 3512 Assign 1</h1>
+          <h3>Peter Huang</h3>
+        </header>
+      </div>
+
+      <div class="box list">
+        <div id="icon">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <h2>Galleries</h2>
+        <ul id="list"></ul>
+      </div>
+      <div class="box info">
+        <section>
+          <label> </label>
+          <h2 id="galleryName"></h2>
+          <label>Native Name:</label>
+          <span id="galleryNative"></span>
+          <label>City:</label>
+          <span id="galleryCity"></span>
+          <label>Address:</label>
+          <span id="galleryAddress"></span>
+          <label>Country:</label>
+          <span id="galleryCountry"></span>
+          <label>Home:</label>
+          <span><a href="" id="galleryHome"></a></span>
+        </section>
+      </div>
+      <div class="box map">
+        <section><h2>Map</h2></section>
+      </div>
+      <div class="box painting">
+        <div class="loader2"><img src="Blocks-1s-200px.gif" /></div>
+        <section>
+          <h2>paintings</h2>
+          <table></table>
+        </section>
+      </div>
+      <div class="box detail">
+        <img />
+        <div>
+          <h1></h1>
+          <h3></h3>
+          <section>
+            <label>Year of work:</label>
+            <span id="singleYear"></span>
+            <label>Medium:</label>
+            <span id="singleMedium"></span>
+            <label>Width:</label>
+            <span id="singleWidth"></span>
+            <label>Height:</label>
+            <span id="singleHeight"></span>
+            <label>Copyright:</label>
+            <span id="singleCopyright"></span>
+            <label>Gallery name:</label>
+            <span id="singleName"></span>
+            <label>Gallery city:</label>
+            <span id="singleCity"></span>
+            <label>Museum link:</label>
+            <span id="singleLink"></span>
+            <label>description:</label>
+            <span id ="singleDescription"></span>
+            <div id="color"></div>
+          </section>
+        <button>close</button>
+        <img id="single">
+        </div>
+      </div>
+    </main>
+    
+    <script src="index.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1nmthWSXNwGbVaMzld3valSy5X2BRr30&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>
