@@ -1,4 +1,4 @@
-function initMap() {}
+function initMap() { }
 
 document.addEventListener("DOMContentLoaded", function () {
   const galleryAPI =
@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const paintingsAPI =
     "https://www.randyconnolly.com/funwebdev/3rd/api/art/paintings.php?gallery=";
-  
-  
+
+
   const imagesAPI =
     `https://res.cloudinary.com/funwebdev/image/upload/w_150/art/paintings/square/`;
 
   const singleImageAPI = "https://res.cloudinary.com/funwebdev/image/upload/w_800/art/paintings/square/"
   const largeImageAPI = "https://res.cloudinary.com/funwebdev/image/upload/w_1100/art/paintings/square/"
-  
+
 
   const container = document.querySelector(".container");
   const loader1 = document.querySelector(".loader1");
@@ -35,7 +35,16 @@ document.addEventListener("DOMContentLoaded", function () {
   let galleryData = {};
   async function loadData() {
     await fetch(galleryAPI)
-      .then((response) => response.json())
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          return Promise.reject({
+            status: response.status,
+            statusText: response.statusText
+          })
+        }
+      })
       .then((data) => {
         loader1.style.display = "none";
         container.style.display = "grid";
@@ -43,8 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
           a.GalleryName > b.GalleryName
             ? 1
             : b.GalleryName > a.GalleryName
-            ? -1
-            : 0
+              ? -1
+              : 0
         );
 
         document.querySelector("#icon").addEventListener("click", () => {
@@ -56,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         populateList();
         populateInfo();
-      });
+      }).catch(err => { console.log(err) });
   }
 
   function singleImageView() {
@@ -70,10 +79,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const detailImg = document.querySelector(".detail img")
         const single = document.querySelector("#single")
-        for (image of imageData ) {
+        for (image of imageData) {
           if (image.Title == title.innerHTML) {
-            detailImg.setAttribute("src", singleImageAPI+image.ImageFileName);
-            single.setAttribute("src", largeImageAPI+image.ImageFileName);
+            detailImg.setAttribute("src", singleImageAPI + image.ImageFileName);
+            single.setAttribute("src", largeImageAPI + image.ImageFileName);
             const h1 = document.querySelector(".detail h1")
             h1.innerHTML = ""
             h1.appendChild(document.createTextNode(image.Title));
@@ -108,13 +117,13 @@ document.addEventListener("DOMContentLoaded", function () {
             description.innerHTML = ""
             description.appendChild(document.createTextNode(image.Description))
             const colors = document.querySelector("#color");
-            colors.innerHTML =""
+            colors.innerHTML = ""
             for (color of image.JsonAnnotations.dominantColors) {
               const span = document.createElement("span");
               span.style.backgroundColor = color.web
               span.setAttribute("title", `Name:${color.name} Hex:${color.web}`);
-              
-              
+
+
               colors.appendChild(span)
             }
 
@@ -126,14 +135,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const large = document.querySelector("#single")
     document.querySelector(".detail img").addEventListener("click", () => {
-      
+
       large.style.visibility = "visible"
     })
 
     document.querySelector("#single").addEventListener("click", () => {
       large.style.visibility = "hidden"
     })
-    document.querySelector("button").onclick = function() {
+    document.querySelector("button").onclick = function () {
       list.classList.toggle("singleView");
       info.classList.toggle("singleView");
       mapBox.classList.toggle("singleView");
@@ -142,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
-  
+
 
   function populateList() {
     const list = document.querySelector("#list");
@@ -209,7 +218,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   async function getImages(id) {
     await fetch(paintingsAPI + id)
-      .then((response) => response.json())
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          return Promise.reject({
+            status: response.status,
+            statusText: response.statusText
+          })
+        }
+      })
       .then((data) => {
         imageData = data.sort((a, b) =>
           a.LastName > b.LastName ? 1 : b.LastName > a.LastName ? -1 : 0
@@ -217,7 +235,7 @@ document.addEventListener("DOMContentLoaded", function () {
         populatePaintings();
         loader2.style.display = "none";
         paintings.style.display = "block";
-      });
+      }).catch(err => { console.log(err) });
   }
 
   function populatePaintings() {
