@@ -29,6 +29,7 @@
   color: var(--text-muted);
   font-family: var(--font-mono);
   line-height: 1.5;
+  white-space: pre-line;
 }
 
 @media (max-width: 560px) {

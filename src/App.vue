@@ -90,7 +90,7 @@ const experience = [
   {
     company: 'Serenorty AI',
     title: 'Full Stack Developer',
-    date: 'May 2024 –\nPresent',
+    date: 'May 2024 –\nMar 2025',
     location: 'Remote',
     bullets: [
       'Adapted React/Python app to Next.js, improving initial page load time and SEO.',

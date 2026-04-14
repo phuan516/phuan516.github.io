@@ -18,9 +18,9 @@ defineProps({
 
 <style scoped>
 .section {
-  display: grid;
-  grid-template-columns: var(--col-date) 1fr;
-  gap: 0 var(--gap-h);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-h);
   padding: var(--section-gap) 0;
   border-top: 1px solid var(--border);
 }
@@ -31,19 +31,11 @@ defineProps({
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-muted);
-  padding-top: 4px;
   font-family: var(--font-mono);
 }
 
 .section__body {
   display: flex;
   flex-direction: column;
-}
-
-@media (max-width: 560px) {
-  .section {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
 }
 </style>
