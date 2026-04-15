@@ -38,6 +38,14 @@
           />
         </SectionBlock>
 
+        <SectionBlock title="Side Projects">
+          <ProjectItem
+            v-for="project in projects"
+            :key="project.name"
+            v-bind="project"
+          />
+        </SectionBlock>
+
       </div>
     </main>
 
@@ -52,6 +60,7 @@ import SectionBlock from './components/SectionBlock.vue'
 import ExperienceItem from './components/ExperienceItem.vue'
 import SkillRow from './components/SkillRow.vue'
 import EducationItem from './components/EducationItem.vue'
+import ProjectItem from './components/ProjectItem.vue'
 
 // ─── Profile ──────────────────────────────────────────────────────────────────
 
@@ -161,6 +170,53 @@ const education = [
     school: 'Mount Royal University',
     years: '2017 – 2023',
     location: 'Calgary, AB',
+  },
+]
+
+// ─── Side Projects ────────────────────────────────────────────────────────────
+
+const projects = [
+  {
+    name: '100WeeksCSS Challenge',
+    description: 'Daily CSS design challenges showcasing front-end creativity',
+    language: 'HTML, CSS, JavaScript',
+    href: 'https://github.com/phuan516/100WeeksCSS',
+  },
+  {
+    name: 'Commit Bot',
+    description: 'Automation tool for managing conventional commit messages',
+    language: 'Shell',
+    href: 'https://github.com/phuan516/commit-bot',
+  },
+  {
+    name: 'LiveTerm',
+    description: 'Customizable terminal emulator with extensible configuration',
+    language: 'TypeScript, Shell, Docker',
+    href: 'https://github.com/phuan516/LiveTerm-Personal',
+  },
+  {
+    name: 'Photo Search App Challenge',
+    description: 'Image search application with modern UI and API integration',
+    language: 'TypeScript, CSS',
+    href: 'https://github.com/phuan516/photo-search-interview-excerise',
+  },
+    {
+    name: 'Mobile App Interface Hiring Challenge',
+    description: 'Mobile app interface design challenge showcasing front-end skills',
+    language: 'HTML, CSS, JavaScript, SCSS',
+    href: 'https://github.com/phuan516/Frontend-Hiring-Challenge',
+  },
+  {
+    name: 'Dev Utility App',
+    description: 'Collection of personal automation and developer tools',
+    language: 'TypeScript, JavaScript',
+    href: 'https://github.com/phuan516/random-stuff',
+  },
+  {
+    name: 'Game Jam Project',
+    description: 'Final project for game development course; chose Godot to learn a new language and engine',
+    language: 'GDScript',
+    href: 'https://github.com/phuan516/third-times-a-charm',
   },
 ]
 </script>
