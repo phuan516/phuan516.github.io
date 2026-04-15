@@ -58,7 +58,7 @@ import EducationItem from './components/EducationItem.vue'
 const profile = {
   name: 'Peter Huang',
   tagline: 'Full Stack Developer · Calgary, AB',
-  website: 'https://github.com/phuan516',
+  // website: 'https://github.com/phuan516',
   about:
     'Full Stack Developer with a proven track record in front-end and back-end development, using various languages and frameworks including JavaScript, TypeScript, ReactJS, and Python. Proficient in optimizing web applications for better performance and user experience. Demonstrated ability to implement robust coding practices and introduce new technologies to streamline development workflows and enhance scalability. Experienced in using cloud services such as AWS and GCP.',
 }
@@ -66,7 +66,7 @@ const profile = {
 // ─── Contact links (rendered in header) ───────────────────────────────────────
 
 const contacts = [
-  { label: '403-975-8206', href: 'tel:403-975-8206', icon: 'phone', external: false },
+  { label: '+1 403-975-8206', href: 'tel:403-975-8206', icon: 'phone', external: false },
   { label: 'phuan516@mtroyal.ca', href: 'mailto:phuan516@mtroyal.ca', icon: 'email', external: false },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/peter-huang-904b82164/', icon: 'linkedin', external: true },
   { label: 'GitHub', href: 'https://github.com/phuan516', icon: 'github', external: true },
@@ -102,7 +102,7 @@ const experience = [
   {
     company: 'Best Buy Canada',
     title: 'Product Process Specialist',
-    date: 'Jan 2024 –\nPresent',
+    date: 'Nov 2024 –\nMar 2025',
     location: 'Calgary, AB',
     bullets: [
       'Assist customers with computer recommendations from 50+ options based on requirements and inventory.',
@@ -149,8 +149,8 @@ const experience = [
 const skills = [
   { category: 'Languages', items: 'JavaScript, TypeScript, Java, Python, HTML, CSS, SQL' },
   { category: 'Frameworks', items: 'ReactJS, Next.js, GraphQL, REST API, Vue' },
-  { category: 'Tools', items: 'Figma, Jest, Git, GitHub, AWS, GCP, Vercel, Claude Code, Ollama' },
-  { category: 'Databases', items: 'MySQL, MongoDB' },
+  { category: 'Tools', items: 'Figma, Jest, Git, GitHub, AWS, GCP, Vercel, Claude Code, Ollama, Azure Dev Ops, Jenkins' },
+  { category: 'Databases', items: 'MySQL, MongoDB, PostgreSQL' },
 ]
 
 // ─── Education ────────────────────────────────────────────────────────────────
