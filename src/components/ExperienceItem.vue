@@ -3,8 +3,8 @@
     <template #date>{{ date }}</template>
 
     <div class="experience">
-      <h3 class="experience__company">{{ company }}</h3>
-      <p class="experience__title">{{ title }}</p>
+      <h3 class="experience__title">{{ title }}</h3>
+      <p class="experience__company">{{ company }}</p>
       <p v-if="location" class="experience__location">{{ location }}</p>
       <ul v-if="bullets?.length" class="experience__bullets">
         <li v-for="(bullet, i) in bullets" :key="i">{{ bullet }}</li>
@@ -41,14 +41,14 @@ defineProps({
 </script>
 
 <style scoped>
-.experience__company {
+.experience__title {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--text);
   line-height: 1.4;
 }
 
-.experience__title {
+.experience__company {
   font-size: 0.875rem;
   color: var(--text-muted);
   margin-top: 2px;
