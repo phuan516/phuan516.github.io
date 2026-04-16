@@ -1,12 +1,7 @@
 <template>
   <div id="app">
-    <AppHeader
-      :name="profile.name"
-      :tagline="profile.tagline"
-      :website="profile.website"
-      :contacts="contacts"
-      @copy-email="handleCopyEmail"
-    />
+    <AppHeader :name="profile.name" :tagline="profile.tagline" :website="profile.website" :contacts="contacts"
+      @copy-email="handleCopyEmail" />
 
     <main class="main">
       <div class="content">
@@ -16,35 +11,19 @@
         </SectionBlock>
 
         <SectionBlock title="Experience">
-          <ExperienceItem
-            v-for="job in experience"
-            :key="job.company + job.date"
-            v-bind="job"
-          />
+          <ExperienceItem v-for="job in experience" :key="job.company + job.date" v-bind="job" />
         </SectionBlock>
 
         <SectionBlock title="Skills">
-          <SkillRow
-            v-for="skill in skills"
-            :key="skill.category"
-            v-bind="skill"
-          />
+          <SkillRow v-for="skill in skills" :key="skill.category" v-bind="skill" />
         </SectionBlock>
 
         <SectionBlock title="Education">
-          <EducationItem
-            v-for="edu in education"
-            :key="edu.school"
-            v-bind="edu"
-          />
+          <EducationItem v-for="edu in education" :key="edu.school" v-bind="edu" />
         </SectionBlock>
 
         <SectionBlock title="Side Projects">
-          <ProjectItem
-            v-for="project in projects"
-            :key="project.name"
-            v-bind="project"
-          />
+          <ProjectItem v-for="project in projects" :key="project.name" v-bind="project" />
         </SectionBlock>
 
       </div>
@@ -188,6 +167,12 @@ const education = [
 
 const projects = [
   {
+    name: "DevLog",
+    description: "A developer productivity tool for tracking Azure DevOps work items alongside Obsidian vault notes",
+    language: "JavaScript",
+    href: 'https://github.com/phuan516/DevLog',
+  },
+  {
     name: '100WeeksCSS Challenge',
     description: 'Daily CSS design challenges showcasing front-end creativity',
     language: 'HTML, CSS, JavaScript',
@@ -211,7 +196,7 @@ const projects = [
     language: 'TypeScript, CSS',
     href: 'https://github.com/phuan516/photo-search-interview-excerise',
   },
-    {
+  {
     name: 'Mobile App Interface Hiring Challenge',
     description: 'Mobile app interface design challenge showcasing front-end skills',
     language: 'HTML, CSS, JavaScript, SCSS',
@@ -238,20 +223,20 @@ const projects = [
 
 /* ─── Design Tokens ────────────────────────────────────────────────────────── */
 :root {
-  --bg:              #FAFAFA;
-  --text:            #111111;
-  --text-secondary:  #444444;
-  --text-muted:      #888888;
-  --text-light:      #BBBBBB;
-  --border:          #E8E8E8;
+  --bg: #FAFAFA;
+  --text: #111111;
+  --text-secondary: #444444;
+  --text-muted: #888888;
+  --text-light: #BBBBBB;
+  --border: #E8E8E8;
 
-  --font-body:  'DM Sans', system-ui, sans-serif;
-  --font-mono:  'DM Mono', 'Menlo', monospace;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'DM Mono', 'Menlo', monospace;
 
-  --max-width:  680px;
-  --col-date:   110px;
-  --gap-h:      32px;
-  --gap-v:      24px;
+  --max-width: 680px;
+  --col-date: 110px;
+  --gap-h: 32px;
+  --gap-v: 24px;
   --section-gap: 48px;
 }
 
