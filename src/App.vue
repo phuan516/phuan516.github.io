@@ -5,6 +5,7 @@
       :tagline="profile.tagline"
       :website="profile.website"
       :contacts="contacts"
+      @copy-email="handleCopyEmail"
     />
 
     <main class="main">
@@ -50,10 +51,13 @@
     </main>
 
     <AppFooter :name="profile.name" :tagline="profile.tagline" />
+
+    <Toast ref="toast" />
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import SectionBlock from './components/SectionBlock.vue'
@@ -61,6 +65,13 @@ import ExperienceItem from './components/ExperienceItem.vue'
 import SkillRow from './components/SkillRow.vue'
 import EducationItem from './components/EducationItem.vue'
 import ProjectItem from './components/ProjectItem.vue'
+import Toast from './components/Toast.vue'
+
+const toast = ref(null)
+
+function handleCopyEmail() {
+  toast.value?.show('Email copied to clipboard')
+}
 
 // ─── Profile ──────────────────────────────────────────────────────────────────
 

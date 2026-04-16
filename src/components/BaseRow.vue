@@ -37,5 +37,8 @@
     grid-template-columns: 1fr;
     gap: 4px;
   }
+  .base-row__date {
+    white-space: nowrap;
+  }
 }
 </style>

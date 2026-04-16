@@ -11,17 +11,26 @@
       </div>
 
       <nav class="header__contact" aria-label="Contact links">
-        <a
-          v-for="link in contacts"
-          :key="link.label"
-          :href="link.href"
-          :target="link.external ? '_blank' : undefined"
-          :rel="link.external ? 'noopener noreferrer' : undefined"
-          class="header__contact-link"
-        >
-          <component :is="iconMap[link.icon]" class="header__contact-icon" aria-hidden="true" />
-          {{ link.label }}
-        </a>
+        <template v-for="link in contacts" :key="link.label">
+          <button
+            v-if="link.icon === 'email'"
+            class="header__contact-link header__contact-btn"
+            @click="handleEmailClick(link.label)"
+          >
+            <component :is="iconMap[link.icon]" class="header__contact-icon" aria-hidden="true" />
+            {{ link.label }}
+          </button>
+          <a
+            v-else
+            :href="link.href"
+            :target="link.external ? '_blank' : undefined"
+            :rel="link.external ? 'noopener noreferrer' : undefined"
+            class="header__contact-link"
+          >
+            <component :is="iconMap[link.icon]" class="header__contact-icon" aria-hidden="true" />
+            {{ link.label }}
+          </a>
+        </template>
       </nav>
 
     </div>
@@ -64,6 +73,13 @@ const iconMap = {
 const websiteDisplay = computed(() =>
   props.website?.replace(/^https?:\/\//, '') ?? ''
 )
+
+const emit = defineEmits(['copy-email'])
+
+function handleEmailClick(email) {
+  navigator.clipboard.writeText(email)
+  emit('copy-email', email)
+}
 </script>
 
 <style scoped>
@@ -136,6 +152,16 @@ const websiteDisplay = computed(() =>
   width: 15px;
   height: 15px;
   flex-shrink: 0;
+}
+
+.header__contact-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  text-align: left;
 }
 
 @media (max-width: 560px) {
