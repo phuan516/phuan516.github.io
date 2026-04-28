@@ -167,6 +167,12 @@ const education = [
 
 const projects = [
   {
+    name: "Ledger",
+    description: "A budget tracker that uses Google Sheets as a backend. Sign in with Google, connect a spreadsheet, and track spending across categories, payment methods, and fixed expenses — with your data staying entirely in your own Google account.",
+    language: "TypeScript",
+    hreft: "https://github.com/phuan516/Budget"
+  },
+  {
     name: "DevLog",
     description: "A developer productivity tool for tracking Azure DevOps work items alongside Obsidian vault notes",
     language: "JavaScript",
