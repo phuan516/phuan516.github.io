@@ -1,41 +1,44 @@
 <template>
-  <section class="section">
-    <h2 class="section__title">{{ title }}</h2>
-    <div class="section__body">
-      <slot />
-    </div>
-  </section>
+  <div class="section-hd">
+    <span class="section-prompt">{{ prompt }}</span>
+    <div class="section-rule" aria-hidden="true"></div>
+    <span class="section-label">{{ label }}</span>
+  </div>
 </template>
 
 <script setup>
-defineProps({
-  title: {
-    type: String,
-    required: true,
-  },
-})
+defineProps({ prompt: { type: String, required: true }, label: { type: String, required: true } })
 </script>
 
 <style scoped>
-.section {
+.section-hd {
   display: flex;
-  flex-direction: column;
-  gap: var(--gap-h);
-  padding: var(--section-gap) 0;
-  border-top: 1px solid var(--border);
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 22px;
 }
 
-.section__title {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
+.section-prompt {
+  font-size: 12.5px;
+  color: var(--green);
+  white-space: nowrap;
+}
+
+.section-rule {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.section-label {
+  font-size: 11px;
+  color: var(--muted);
   letter-spacing: 0.08em;
-  color: var(--text-muted);
-  font-family: var(--font-mono);
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
-.section__body {
-  display: flex;
-  flex-direction: column;
+@media (max-width: 640px) {
+  .section-prompt { font-size: 11px; }
 }
 </style>

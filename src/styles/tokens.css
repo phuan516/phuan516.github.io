@@ -1,0 +1,21 @@
+:root[data-theme="light"] {
+  --bg: #f5efe2;
+  --ink: #22201a;
+  --muted: #7a6f58;
+  --line: rgba(34, 32, 26, 0.14);
+  --accent: #a8581c;
+  --green: #5a6f3a;
+  --panel: #ebe4d3;
+  --panel-hover: #e2d9c3;
+}
+
+:root[data-theme="dark"] {
+  --bg: #15130f;
+  --ink: #e8dfcc;
+  --muted: #7e7461;
+  --line: rgba(232, 223, 204, 0.12);
+  --accent: #e3a85c;
+  --green: #a8c47e;
+  --panel: #1c1913;
+  --panel-hover: #221e16;
+}
