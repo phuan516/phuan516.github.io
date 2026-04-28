@@ -8,8 +8,8 @@
     <p class="about-intro">{{ resume.intro }}</p>
     <div class="about-badges">
       <span class="badge"><span class="c-green">●</span> {{ resume.status }}</span>
-      <span class="badge">⌖ {{ resume.location }}</span>
       <span class="badge">↗ Open to relocation</span>
+      <span class="badge">⌖ {{ resume.location }}</span>
     </div>
     <SectionBlock class="whoami-hd" prompt="$ whoami" label="About" />
     <div class="about-comments">
