@@ -25,7 +25,7 @@ export const resume = {
         'Introduced AI coding tools for rapid prototyping, cutting approval turnaround by ~2 weeks.',
         'Incorporated OHS requirements into incident reporting, reducing documentation time by 2–3 hours per incident.',
       ],
-      stack: ['TypeScript', 'React', 'Node', 'AWS'],
+      stack: ['Javascript', 'React', 'Express', 'NodeJS', 'PostgreSQL', 'AWS', 'Azure Devops', 'Jenkins', 'Figma', 'Claude Code'],
     },
     {
       role: 'Full Stack Developer',
@@ -38,7 +38,7 @@ export const resume = {
         'Collaborated with the product team on roadmap and project deliverables.',
         'Designed and implemented UI layouts in Figma following Material Design best practices.',
       ],
-      stack: ['Next.js', 'TypeScript', 'Python', 'Figma'],
+      stack: ['Next.js', 'React', 'TypeScript', 'Python', 'NodeJS', 'Figma', 'GitHub' ],
     },
     {
       role: 'Product Process Specialist',
@@ -63,7 +63,7 @@ export const resume = {
         'Led an AWS pipeline monitoring tool trial with 30 developers across 5 teams.',
         'Redesigned UI based on feedback, reducing pipeline idle time by 70%.',
       ],
-      stack: ['React', 'AWS', 'Node'],
+      stack: ['Next.js', 'AWS', 'GCP','NodeJS', 'Vercel', 'Figma', 'GitHub', 'Shortcut', 'MongoDB', 'GraphQL'],
     },
     {
       role: 'Project Manager, Intern',

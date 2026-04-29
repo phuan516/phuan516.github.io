@@ -1,6 +1,6 @@
 <template>
   <section id="experience" class="section">
-    <SectionBlock prompt="$ git log --author=peter --pretty=experience" label="Experience" />
+    <SectionBlock prompt="$ git log --author=peter" label="Experience" />
     <article
       v-for="(exp, i) in resume.experience"
       :key="i"
