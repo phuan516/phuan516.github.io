@@ -90,6 +90,16 @@ export const resume = {
   ],
   projects: [
     {
+      name: 'Stack',
+      blurb: 'A 3D bin-packing simulator for expo/convention merchandise packing. ',
+      detail:
+        'Users enter item dimensions and box sizes; the app computes a tight arrangement and renders it as an interactive 3D scene with a layer-by-layer packing guide.',
+      stack: ['TypeScript'],
+      year: '2025',
+      link: 'https://github.com/phuan516/Stack',
+      status: 'Active',
+    },
+    {
       name: 'Ledger',
       blurb: 'A budget tracker that uses Google Sheets as the backend.',
       detail:
