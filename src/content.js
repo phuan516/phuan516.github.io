@@ -90,13 +90,43 @@ export const resume = {
   ],
   projects: [
     {
+      name: 'On The Line',
+      blurb: 'A goal-accountability app — stake something on a goal, name a friend as referee.',
+      detail:
+        'Set a goal, put something on the line, and have a friend judge whether you followed through. Backed by Postgres via Prisma, with email/password and optional Google OAuth login.',
+      stack: ['TypeScript', 'Next.js', 'Prisma', 'tRPC'],
+      year: '2026',
+      link: 'github.com/phuan516/On-The-Line',
+      status: 'Active',
+    },
+    {
+      name: 'Pocket Aces',
+      blurb: 'A mobile-first, Duolingo-style app for learning poker.',
+      detail:
+        'Lessons and units teach poker fundamentals through hands-on practice, with per-user progress tracked via a custom auth system and MongoDB.',
+      stack: ['TypeScript', 'Next.js', 'MongoDB'],
+      year: '2026',
+      link: 'github.com/phuan516/Pocket-Aces',
+      status: 'Active',
+    },
+    {
+      name: 'Inventori',
+      blurb: 'A simple inventory tracker for independent hobby shops.',
+      detail:
+        'Tracks Gunpla kits, scale models, and figures with a dashboard and product drawer UI. Data is meant to live in a Google Sheet the user owns — Google OAuth/Sheets integration is in progress.',
+      stack: ['TypeScript', 'Next.js', 'React'],
+      year: '2026',
+      link: 'github.com/phuan516/Inventori',
+      status: 'Active',
+    },
+    {
       name: 'Stack',
       blurb: 'A 3D bin-packing simulator for expo/convention merchandise packing. ',
       detail:
         'Users enter item dimensions and box sizes; the app computes a tight arrangement and renders it as an interactive 3D scene with a layer-by-layer packing guide.',
       stack: ['TypeScript'],
       year: '2025',
-      link: 'https://github.com/phuan516/Stack',
+      link: 'github.com/phuan516/Stack',
       status: 'Active',
     },
     {
@@ -104,7 +134,7 @@ export const resume = {
       blurb: 'A budget tracker that uses Google Sheets as the backend.',
       detail:
         'Sign in with Google, connect a spreadsheet, and track spending across categories, payment methods, and fixed expenses — your data stays entirely in your own Google account.',
-      stack: ['TypeScript'],
+      stack: ['TypeScript', 'Next.js', 'Tailwind', 'Zustand'],
       year: '2025',
       link: 'github.com/phuan516/Budget',
       status: 'Active',
